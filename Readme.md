@@ -53,8 +53,8 @@ Don't reinvent the wheel
 
 For example, if nginx has an official image, use it (FROM nginx:latest)
 
-Use "public" IP in Docker
------------------------
+Use "public" IP in Docker (no NAT)
+----------------------------------
 
 With --net=host param when you run docker, all you NIC are in Docker and you do not need to expose port.
 Example:
@@ -98,3 +98,8 @@ Allow user to use docker without root privilege
 	sudo service docker restart
 	# log out and log in
 
+
+Other
+-----
+https://docs.docker.com/articles/basics/
+http://www.centurylinklabs.com/15-quick-docker-tips/
