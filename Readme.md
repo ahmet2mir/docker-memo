@@ -16,6 +16,11 @@ Then enter in your container (use --name when you run it or simply docker ps to 
 
 	sudo docker-enter <container_name>
 
+Since Docker 1.3 you can directly use docker exec
+
+	docker exec -it <container_name> /bin/bash
+
+
 Don't forget MAINTAINER
 -----------------------
 
