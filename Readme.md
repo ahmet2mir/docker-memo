@@ -104,6 +104,16 @@ Allow user to use docker without root privilege
 	# log out and log in
 
 
+Disable IPV6 for nginx
+----------------------
+
+Some servers don't support IPv6, so the container can't start with default nginx configuration
+
+	# disable ipv6 support
+	if [ ! -f /proc/net/if_inet6 ]; then
+	  sed -e '/listen \[::\]:80/ s/^#*/#/' -i /etc/nginx/sites-enabled/*
+	fi
+
 Other
 -----
 https://docs.docker.com/articles/basics/
