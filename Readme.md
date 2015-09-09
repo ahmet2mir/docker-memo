@@ -114,6 +114,12 @@ Some servers don't support IPv6, so the container can't start with default nginx
 	  sed -e '/listen \[::\]:80/ s/^#*/#/' -i /etc/nginx/sites-enabled/*
 	fi
 
+View all commands / commit / layer
+----------------------------------
+	
+	image=<my_image>
+	docker history --no-trunc $image | awk '{for (i=5; i<=NF; i++)printf "%s ",$i;printf "\n"}'
+
 Other
 -----
 https://docs.docker.com/articles/basics/
